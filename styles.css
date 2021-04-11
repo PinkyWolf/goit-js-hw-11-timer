@@ -2,18 +2,28 @@
   font-family: 'radioland';
   src: url(./font/RADIOLAND.TTF);
 }
+
 html,
 body {
   height: 100%;
 }
+
 .timer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
 
   color: green;
   font-size: 20px;
   font-family: 'radioland';
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  color: red;
+  font-size: 40px;
 }
