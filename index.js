@@ -20,15 +20,10 @@ class CountdownTimer {
   }, 1000);
 
   updateTime(time) {
-    const days = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
-    const hours = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-    const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-    const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
-
-    refs.days.textContent = `${days}`;
-    refs.hours.textContent = `${hours}`;
-    refs.mins.textContent = `${mins}`;
-    refs.secs.textContent = `${secs}`;
+    refs.days.textContent = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
+    refs.hours.textContent = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    refs.mins.textContent = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    refs.secs.textContent = this.pad(Math.floor((time % (1000 * 60)) / 1000));
   }
 
   pad(value) {
@@ -46,3 +41,4 @@ new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("june 01, 2021"),
 });
+
